@@ -1,31 +1,110 @@
+/* General Styles */
+body {
+    background-color: #1c1c1c; /* Dark background */
+    color: #fff; /* White text */
+    font-family: 'Arial', sans-serif; /* Simple, bold font */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Darker header background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow */
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #ffcc00; /* Bold yellow text */
+    margin: 0;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #999; /* Light grey text */
+}
+
+.promo {
+    text-align: center;
+    background-color: #444; /* Dark grey background */
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid #ffcc00; /* Yellow border */
+}
+
+.promo p {
+    font-size: 1.5rem;
+    color: #fff; /* White text */
+}
+
+.tracks {
+    padding: 20px;
+    background-color: #292929; /* Dark grey background */
+}
+
+.tracks h2 {
+    text-align: center;
+    color: #ffcc00; /* Bold yellow text */
+}
+
 .track-list {
     display: flex; /* Flexbox for horizontal layout */
-    flex-wrap: wrap; /* Wrap to the next line on smaller screens */
-    justify-content: center; /* Center tracks */
-    gap: 20px; /* Space between tracks */
+    justify-content: space-around; /* Even spacing */
+    flex-wrap: wrap; /* Wrap on small screens */
+    margin-top: 20px;
 }
 
 .track {
-    background-color: #fff; /* White background for track items */
-    border-radius: 10px; /* Rounded corners */
+    background-color: #333; /* Dark track background */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.track h3 {
+    color: #ffcc00; /* Yellow track title */
+}
+
+.track audio {
+    width: 100%; /* Full-width audio player */
+    margin-top: 10px;
+}
+
+.collage {
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Center content */
-    transition: transform 0.2s; /* Smooth hover effect */
 }
 
-.track:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+.collage h2 {
+    text-align: center;
+    color: #ffcc00; /* Yellow text */
 }
 
-.track-cover {
-    width: 100%; /* Full width */
-    max-width: 150px; /* Limit max width */
+.image-collage {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns grid */
+    grid-gap: 10px; /* Space between images */
+}
+
+.image-collage img {
+    width: 100%;
     border-radius: 5px; /* Rounded corners */
-    margin-bottom: 10px; /* Space below image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.3s; /* Smooth hover effect */
 }
 
-audio {
-    width: 100%; /* Full width for audio controls */
-    margin-top: 10px; /* Space above audio controls */
+.image-collage img:hover {
+    transform: scale(1.05); /* Enlarge slightly on hover */
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: #ccc; /* Light grey text */
 }
