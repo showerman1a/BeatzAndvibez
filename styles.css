@@ -1,42 +1,53 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #f0f0f0; /* Light text color */
+    background-color: #f4f1e6; /* Light beige background */
+    color: #333; /* Dark text color */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #ff4081; /* Bright pink */
+    background-color: #6b4f4f; /* Dark brown */
     color: white;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif; /* Vintage style font */
+    font-size: 3em;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #6b4f4f; /* Dark brown for section headings */
 }
 
 nav {
-    background-color: #1e1e1e; /* Darker background for navigation */
+    background-color: #4a3c3c; /* Darker brown for navigation */
 }
 
 nav ul {
-    list-style-type: none; /* Remove bullets */
+    list-style-type: none;
     padding: 10px;
-    display: flex; /* Flexbox for horizontal layout */
-    justify-content: center; /* Center items */
+    display: flex;
+    justify-content: center;
 }
 
 nav li {
-    margin: 0 15px; /* Space between links */
+    margin: 0 20px;
 }
 
 nav a {
-    color: #ffeb3b; /* Bright yellow for links */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Bold text */
+    color: #ffeb3b; /* Golden yellow for links */
+    text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
 main {
@@ -44,35 +55,40 @@ main {
     text-align: center;
 }
 
+.intro {
+    margin-bottom: 40px;
+}
+
 .track {
-    background-color: #4caf50; /* Green background for track items */
+    background-color: #fff; /* White background for track items */
     margin: 20px auto;
-    padding: 15px;
-    border-radius: 10px; /* Rounded corners */
-    transition: transform 0.2s; /* Smooth hover effect */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
 }
 
 .track:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.03);
 }
 
 .track-cover {
-    width: 100%; /* Full width */
+    width: 100%;
     max-width: 200px; /* Limit max width */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
 }
 
 footer {
     text-align: center;
-    margin-top: 20px;
-    color: #ffeb3b; /* Bright yellow for footer text */
+    margin-top: 40px;
+    color: #6b4f4f;
 }
 
 .social-link {
-    color: #ffeb3b; /* Bright yellow for links */
-    text-decoration: none; /* Remove underline */
+    color: #ffeb3b;
+    text-decoration: none;
 }
 
 .social-link:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
