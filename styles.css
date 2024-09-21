@@ -1,94 +1,31 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f1e6; /* Light beige background */
-    color: #333; /* Dark text color */
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #6b4f4f; /* Dark brown */
-    color: white;
-    padding: 40px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-    font-family: 'Playfair Display', serif; /* Vintage style font */
-    font-size: 3em;
-    margin: 0;
-}
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    color: #6b4f4f; /* Dark brown for section headings */
-}
-
-nav {
-    background-color: #4a3c3c; /* Darker brown for navigation */
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    margin: 0 20px;
-}
-
-nav a {
-    color: #ffeb3b; /* Golden yellow for links */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-.intro {
-    margin-bottom: 40px;
+.track-list {
+    display: flex; /* Flexbox for horizontal layout */
+    flex-wrap: wrap; /* Wrap to the next line on smaller screens */
+    justify-content: center; /* Center tracks */
+    gap: 20px; /* Space between tracks */
 }
 
 .track {
     background-color: #fff; /* White background for track items */
-    margin: 20px auto;
+    border-radius: 10px; /* Rounded corners */
     padding: 20px;
-    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
+    text-align: center; /* Center content */
+    transition: transform 0.2s; /* Smooth hover effect */
 }
 
 .track:hover {
-    transform: scale(1.03);
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .track-cover {
-    width: 100%;
-    max-width: 200px; /* Limit max width */
-    border-radius: 5px;
+    width: 100%; /* Full width */
+    max-width: 150px; /* Limit max width */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space below image */
 }
 
-footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #6b4f4f;
-}
-
-.social-link {
-    color: #ffeb3b;
-    text-decoration: none;
-}
-
-.social-link:hover {
-    text-decoration: underline;
+audio {
+    width: 100%; /* Full width for audio controls */
+    margin-top: 10px; /* Space above audio controls */
 }
