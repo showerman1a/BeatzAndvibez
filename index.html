@@ -3,57 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automated Assistance Website</title>
-    <!-- External CSS -->
+    <title>Automated Assistance & Lead Generation</title>
+    <meta name="description" content="Get personalized assistance and drive your business growth with our automated chatbot and lead generation platform.">
+    <meta name="keywords" content="lead generation, chatbot, automated assistance, business growth">
+    <meta name="author" content="Your Company Name">
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Include Howler.js (if you need audio support) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 </head>
 <body>
+    <!-- Header Section with Navigation -->
     <header>
-        <h1>Welcome to Our Website</h1>
-        <p>Your automated assistant for any inquiries.</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <h1>Boost Your Business with Automated Assistance</h1>
+        <p>Discover the power of AI-driven solutions to enhance customer engagement and generate quality leads.</p>
+        <button class="cta-button" onclick="scrollToForm()">Get Started Now</button>
     </header>
 
+    <!-- Main Content -->
     <main>
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <div class="service">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Chatbot</h3>
+                    <p>Engage visitors with our intelligent chatbot, providing instant assistance and improving customer satisfaction.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Lead Generation</h3>
+                    <p>Capture high-quality leads with our smart forms and dynamic call-to-actions designed to convert.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Analytics</h3>
+                    <p>Track user behavior and campaign performance with our integrated analytics tools.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Capture Form Section -->
         <section id="lead-capture">
             <h2>Get in Touch</h2>
+            <p>Sign up to receive personalized assistance and stay updated with our latest offerings.</p>
             <form id="lead-form">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-                <button type="submit">Submit</button>
+                <button type="submit" class="cta-button">Submit</button>
             </form>
         </section>
 
+        <!-- Chat Assistant Section -->
         <section id="chat-assistant">
-            <h2>Chat Assistance</h2>
+            <h2>Chat with Us</h2>
             <div id="chat-window">
                 <div id="chat-messages">
-                    <p><strong>Bot:</strong> Hello! How can I help you today?</p>
+                    <p><strong>Bot:</strong> Hi there! How can I assist you today?</p>
                 </div>
-                <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
                 <button id="send-button"><i class="fas fa-paper-plane"></i></button>
             </div>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
+        <p>&copy; 2024 Your Company Name. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
     </footer>
 
-    <!-- JavaScript to handle form submission and chat bot -->
+    <!-- JavaScript to handle form submission, chatbot, and dynamic elements -->
     <script>
+        // Smooth scroll to lead capture form
+        function scrollToForm() {
+            document.getElementById('lead-capture').scrollIntoView({ behavior: 'smooth' });
+        }
+
         // Handle lead capture form submission
         document.getElementById('lead-form').addEventListener('submit', function(event) {
             event.preventDefault();
-            alert('Lead submitted! Thank you.');
-            // Add logic to send the lead to your backend here
+            alert('Thank you for reaching out! We will get back to you soon.');
+            // Here you would typically send the form data to your backend
         });
 
         // Simple chatbot logic (for demonstration)
@@ -79,7 +118,7 @@
 
             setTimeout(() => {
                 const botMessage = document.createElement('p');
-                botMessage.innerHTML = `<strong>Bot:</strong> Sorry, I'm a demo bot and can't process requests yet.`;
+                botMessage.innerHTML = `<strong>Bot:</strong> Thanks for your message. We'll get back to you soon.`;
                 chatWindow.appendChild(botMessage);
                 chatWindow.scrollTop = chatWindow.scrollHeight;
             }, 1000);
