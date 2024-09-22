@@ -3,69 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban 90s Hip-Hop Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Audio Player with Howler.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Urban Beats</h1>
-        <p class="tagline">Feel the 90s Vibe in Every Beat</p>
-    </header>
+    <h1>Audio Player Test</h1>
+    <button onclick="playSound()">Play Audio</button>
 
-    <section class="promo">
-        <h2>Special Offer!</h2>
-        <p>Get a free quote and enjoy <strong>10% off</strong> on your first purchase!</p>
-    </section>
+    <script>
+        // JavaScript code for Howler.js
+        var sound = new Howl({
+            src: ['track1.mp3', 'track1'], // Replace with your file paths
+            volume: 0.5,
+        });
 
-    <section class="tracks">
-        <h2>Latest Tracks</h2>
-        <div class="track-list">
-            <div class="track">
-                <h3>Track 1: Old School Groove</h3>
-                <p>Artist: DJ 90s</p>
-                <audio controls>
-                    <source src="track1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="track">
-                <h3>Track 2: Street Vibes</h3>
-                <p>Artist: MC Urban</p>
-                <audio controls>
-                    <source src="track2.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-            <div class="track">
-                <h3>Track 3: Hip-Hop Flow</h3>
-                <p>Artist: B-Boy Legends</p>
-                <audio controls>
-    <source src="https://dl.dropboxusercontent.com/s/FILE_ID/song.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
-                </audio>
-            </div>
-        </div>
-    </section>
-
-    <section class="collage">
-        <h2>Lets WORk !</h2>
-        <div class="image-collage">
-
-            </section
-
-
-
-
-          
-
-            
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Urban Beats. All rights reserved.</p>
-    </footer>
+        function playSound() {
+            sound.play();
+        }
+    </script>
 </body>
 </html>
+
