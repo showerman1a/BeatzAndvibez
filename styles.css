@@ -1,110 +1,119 @@
-/* General Styles */
-body {
-    background-color: #1c1c1c; /* Dark background */
-    color: #fff; /* White text */
-    font-family: 'Arial', sans-serif; /* Simple, bold font */
+/* Resetting some default styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* General Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
     text-align: center;
-    padding: 20px;
-    background-color: #333; /* Darker header background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow */
 }
 
-header h1 {
-    font-size: 3rem;
-    color: #ffcc00; /* Bold yellow text */
-    margin: 0;
-}
-
-.tagline {
-    font-style: italic;
-    font-size: 1.2rem;
-    color: #999; /* Light grey text */
-}
-
-.promo {
-    text-align: center;
-    background-color: #444; /* Dark grey background */
-    padding: 10px;
-    margin: 20px 0;
-    border: 2px solid #ffcc00; /* Yellow border */
-}
-
-.promo p {
-    font-size: 1.5rem;
-    color: #fff; /* White text */
-}
-
-.tracks {
-    padding: 20px;
-    background-color: #292929; /* Dark grey background */
-}
-
-.tracks h2 {
-    text-align: center;
-    color: #ffcc00; /* Bold yellow text */
-}
-
-.track-list {
-    display: flex; /* Flexbox for horizontal layout */
-    justify-content: space-around; /* Even spacing */
-    flex-wrap: wrap; /* Wrap on small screens */
-    margin-top: 20px;
-}
-
-.track {
-    background-color: #333; /* Dark track background */
-    padding: 15px;
-    border-radius: 8px; /* Rounded corners */
-    width: 30%;
-    margin-bottom: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
-}
-
-.track h3 {
-    color: #ffcc00; /* Yellow track title */
-}
-
-.track audio {
-    width: 100%; /* Full-width audio player */
-    margin-top: 10px;
-}
-
-.collage {
-    padding: 20px;
-}
-
-.collage h2 {
-    text-align: center;
-    color: #ffcc00; /* Yellow text */
-}
-
-.image-collage {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns grid */
-    grid-gap: 10px; /* Space between images */
-}
-
-.image-collage img {
-    width: 100%;
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    transition: transform 0.3s; /* Smooth hover effect */
-}
-
-.image-collage img:hover {
-    transform: scale(1.05); /* Enlarge slightly on hover */
+main {
+    flex: 1;
+    padding: 2em;
 }
 
 footer {
     background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 10px 0;
-    font-size: 0.9rem;
-    color: #ccc; /* Light grey text */
+    padding: 1em;
+}
+
+/* Lead Capture Form */
+#lead-capture {
+    margin-bottom: 2em;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#lead-capture form {
+    display: flex;
+    flex-direction: column;
+}
+
+#lead-capture label {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+#lead-capture input {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#lead-capture button {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#lead-capture button:hover {
+    background-color: #555;
+}
+
+/* Chat Assistant */
+#chat-assistant {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#chat-window {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#chat-messages p {
+    margin-bottom: 1em;
+}
+
+#user-input {
+    width: calc(100% - 40px);
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#send-button {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s;
+}
+
+#send-button:hover {
+    background-color: #555;
 }

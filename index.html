@@ -3,24 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Player with Howler.js</title>
+    <title>Automated Assistance Website</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Include Howler.js (if you need audio support) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 </head>
 <body>
-    <h1>Audio Player Test</h1>
-    <button onclick="playSound()">Play Audio</button>
+    <header>
+        <h1>Welcome to Our Website</h1>
+        <p>Your automated assistant for any inquiries.</p>
+    </header>
 
+    <main>
+        <section id="lead-capture">
+            <h2>Get in Touch</h2>
+            <form id="lead-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="chat-assistant">
+            <h2>Chat Assistance</h2>
+            <div id="chat-window">
+                <div id="chat-messages">
+                    <p><strong>Bot:</strong> Hello! How can I help you today?</p>
+                </div>
+                <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
+                <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to handle form submission and chat bot -->
     <script>
-        // JavaScript code for Howler.js
-        var sound = new Howl({
-            src: ['track1.mp3', 'track1'], // Replace with your file paths
-            volume: 0.5,
+        // Handle lead capture form submission
+        document.getElementById('lead-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Lead submitted! Thank you.');
+            // Add logic to send the lead to your backend here
         });
 
-        function playSound() {
-            sound.play();
+        // Simple chatbot logic (for demonstration)
+        const chatWindow = document.getElementById('chat-messages');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-button');
+
+        sendButton.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const userText = userInput.value.trim();
+            if (userText === '') return;
+
+            const userMessage = document.createElement('p');
+            userMessage.innerHTML = `<strong>You:</strong> ${userText}`;
+            chatWindow.appendChild(userMessage);
+            userInput.value = '';
+
+            setTimeout(() => {
+                const botMessage = document.createElement('p');
+                botMessage.innerHTML = `<strong>Bot:</strong> Sorry, I'm a demo bot and can't process requests yet.`;
+                chatWindow.appendChild(botMessage);
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+            }, 1000);
         }
     </script>
 </body>
 </html>
-
