@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 /* General Styles */
@@ -11,33 +11,32 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #e1bee7, #f8bbd0);
     color: #333;
 }
 
 /* Navigation Styles */
 header nav {
-    background-color: #444;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 1em;
     display: flex;
     justify-content: space-around;
+    border-radius: 5px;
 }
 
 header nav a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     padding: 0.5em 1em;
 }
 
 header nav a:hover {
-    background-color: #333;
+    background-color: #ff4081;
     border-radius: 5px;
 }
 
 /* Header Section */
 header {
-    background-image: linear-gradient(to right, #0066cc, #33ccff);
-    color: #fff;
     text-align: center;
     padding: 2em 1em;
     position: relative;
@@ -53,7 +52,7 @@ header p {
 }
 
 .cta-button {
-    background-color: #ff6600;
+    background-color: #ff4081;
     color: #fff;
     padding: 0.8em 1.5em;
     border: none;
@@ -65,7 +64,7 @@ header p {
 }
 
 .cta-button:hover {
-    background-color: #e65c00;
+    background-color: #ff2d6e;
 }
 
 /* Main Content */
@@ -80,55 +79,4 @@ main {
     padding: 2em 1em;
     border-radius: 5px;
     margin-bottom: 2em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.services-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.service {
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    padding: 1em;
-    margin: 1em;
-    text-align: center;
-    width: 30%;
-}
-
-.service i {
-    font-size: 3em;
-    color: #0066cc;
-    margin-bottom: 0.5em;
-}
-
-.service h3 {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-.service p {
-    font-size: 1em;
-}
-
-/* Lead Capture Form Section */
-#lead-capture {
-    background-color: #fff;
-    padding: 2em 1em;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 2em;
-}
-
-#lead-capture form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#lead-capture
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0

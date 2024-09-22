@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automated Assistance & Lead Generation</title>
-    <meta name="description" content="Get personalized assistance and drive your business growth with our automated chatbot and lead generation platform.">
-    <meta name="keywords" content="lead generation, chatbot, automated assistance, business growth">
+    <title>Magical Assistance & Lead Generation</title>
+    <meta name="description" content="Experience the magic of AI-driven solutions with our automated chatbot and lead generation platform.">
+    <meta name="keywords" content="lead generation, chatbot, automated assistance, business growth, reviews">
     <meta name="author" content="Your Company Name">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
 </head>
 <body>
     <!-- Header Section with Navigation -->
@@ -17,10 +16,11 @@
         <nav>
             <a href="#home">Home</a>
             <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
         </nav>
-        <h1>Boost Your Business with Automated Assistance</h1>
-        <p>Discover the power of AI-driven solutions to enhance customer engagement and generate quality leads.</p>
+        <h1>Unlock the Magic of Automated Assistance</h1>
+        <p>Transform your business with AI-driven solutions that engage and convert.</p>
         <button class="cta-button" onclick="scrollToForm()">Get Started Now</button>
     </header>
 
@@ -28,7 +28,7 @@
     <main>
         <!-- Services Section -->
         <section id="services">
-            <h2>Our Services</h2>
+            <h2>Our Enchanting Services</h2>
             <div class="services-container">
                 <div class="service">
                     <i class="fas fa-robot"></i>
@@ -74,6 +74,23 @@
                 <button id="send-button"><i class="fas fa-paper-plane"></i></button>
             </div>
         </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews">
+            <h2>What Our Clients Say</h2>
+            <div id="review-container">
+                <!-- Review entries will be dynamically added here -->
+            </div>
+            <form id="review-form">
+                <label for="reviewer-name">Your Name:</label>
+                <input type="text" id="reviewer-name" name="reviewer-name" placeholder="Your Name" required>
+                
+                <label for="review-text">Your Review:</label>
+                <textarea id="review-text" name="review-text" placeholder="Write your review here..." required></textarea>
+                
+                <button type="submit" class="cta-button">Submit Review</button>
+            </form>
+        </section>
     </main>
 
     <!-- Footer Section -->
@@ -81,7 +98,7 @@
         <p>&copy; 2024 Your Company Name. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
     </footer>
 
-    <!-- JavaScript to handle form submission, chatbot, and dynamic elements -->
+    <!-- JavaScript to handle form submissions, reviews, and chatbot -->
     <script>
         // Smooth scroll to lead capture form
         function scrollToForm() {
@@ -123,6 +140,22 @@
                 chatWindow.scrollTop = chatWindow.scrollHeight;
             }, 1000);
         }
+
+        // Handle review submission
+        document.getElementById('review-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const reviewerName = document.getElementById('reviewer-name').value;
+            const reviewText = document.getElementById('review-text').value;
+
+            const reviewEntry = document.createElement('div');
+            reviewEntry.className = 'review-entry';
+            reviewEntry.innerHTML = `<strong>${reviewerName}</strong><p>${reviewText}</p><button class="like-button">👍</button>`;
+            document.getElementById('review-container').appendChild(reviewEntry);
+
+            // Clear the form
+            document.getElementById('reviewer-name').value = '';
+            document.getElementById('review-text').value = '';
+        });
     </script>
 </body>
 </html>
