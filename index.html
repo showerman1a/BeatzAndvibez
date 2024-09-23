@@ -3,88 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Local Handyman Services | Quality Repairs & Maintenance</title>
-    
-    <meta name="description" content="Reliable handyman services in [Your City]. From plumbing to electrical work, we provide quality home repairs and maintenance. Request a free estimate today!">
-    <meta name="keywords" content="handyman services, home repairs, plumbing, electrical work, [Your City] handyman">
-    <meta name="author" content="Your Company Name">
-    
-    <!-- Open Graph Meta Tags for Social Media Sharing -->
-    <meta property="og:title" content="Your Local Handyman Services">
-    <meta property="og:description" content="Expert handyman services in [Your City] for all your home repair needs. Get in touch for a free quote!">
-    <meta property="og:image" content="URL-to-your-image.jpg">
-    <meta property="og:url" content="https://yourwebsite.com">
-    
+    <title>Beatz and Vibez</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
+        <h1>Welcome to Beatz and Vibez</h1>
         <nav>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact</a>
+            <ul>
+                <li><a href="#tracks">Tracks</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-        <h1>Transform Your Home with Our Trusted Handyman Services</h1>
-        <button class="cta-button" onclick="scrollToForm()">Get a Free Estimate</button>
     </header>
 
-    <main>
-        <section id="services">
-            <h2>Our Handyman Services</h2>
-            <div class="service">
-                <h3>Plumbing</h3>
-                <p>Reliable plumbing services to fix leaks, install fixtures, and more.</p>
+    <section id="tracks">
+        <h2>Our Tracks</h2>
+        <div class="track-container">
+            <!-- Example Track -->
+            <div class="track">
+                <div class="track-info">
+                    <h3>Track Title</h3>
+                    <audio controls>
+                        <source src="track1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p>Price: $9.99</p>
+                    <button class="purchase-btn">Buy Now</button>
+                </div>
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    <div class="comments">
+                        <p><strong>User1:</strong> Love this beat!</p>
+                        <p><strong>User2:</strong> This is fire!</p>
+                    </div>
+                    <textarea placeholder="Leave a comment..."></textarea>
+                    <button class="comment-btn">Post Comment</button>
+                </div>
             </div>
-            <div class="service">
-                <h3>Electrical Work</h3>
-                <p>Safe and efficient electrical repairs and installations.</p>
-            </div>
-            <!-- Add more services as needed -->
-        </section>
-
-        <section id="lead-capture">
-            <h2>Request a Quote</h2>
-            <form id="lead-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="service">Select Service:</label>
-                <select id="service" name="service">
-                    <option value="plumbing">Plumbing</option>
-                    <option value="electrical">Electrical</option>
-                    <!-- Add other services -->
-                </select>
-                <button type="submit" class="cta-button">Request Quote</button>
-            </form>
-        </section>
-
-        <section id="reviews">
-            <h2>What Our Clients Say</h2>
-            <div id="review-container">
-                <!-- Review entries will be dynamically added here -->
-            </div>
-            <form id="review-form">
-                <label for="reviewer-name">Your Name:</label>
-                <input type="text" id="reviewer-name" required>
-                <label for="review-text">Your Review:</label>
-                <textarea id="review-text" required></textarea>
-                <button type="submit" class="cta-button">Submit Review</button>
-            </form>
-        </section>
-    </main>
+            <!-- Repeat .track for each track you want to add -->
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Your Local Handyman Services. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+        <p>&copy; 2024 Beatz and Vibez. All rights reserved.</p>
     </footer>
 
-    <script>
-        // JavaScript for form handling and review submissions (as previously outlined)
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
