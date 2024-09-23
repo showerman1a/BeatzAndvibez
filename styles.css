@@ -1,84 +1,89 @@
-/* Mobile-Friendly Styles */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 0;
-    }
+/* styles.css */
 
-    h1 {
-        font-size: 2.5rem; /* Smaller font size for mobile */
-        letter-spacing: 2px;
-    }
-
-    nav {
-        flex-direction: column; /* Stack navigation links vertically */
-        gap: 15px;
-    }
-
-    nav a {
-        font-size: 1.1rem; /* Smaller font size for links */
-    }
-
-    #hero {
-        padding: 50px 20px; /* Reduce padding */
-    }
-
-    #hero h2 {
-        font-size: 2rem; /* Adjust heading size */
-    }
-
-    #hero p {
-        font-size: 1rem; /* Smaller font size for paragraph */
-    }
-
-    .btn {
-        padding: 12px 25px; /* Smaller padding for buttons */
-        font-size: 1rem;
-    }
-
-    #tracks {
-        flex-direction: column; /* Stack tracks vertically */
-        align-items: center;
-        padding: 30px 10px; /* Reduce padding */
-    }
-
-    .track {
-        width: 90%; /* Full width for mobile */
-        margin-bottom: 20px; /* Add spacing between track cards */
-    }
+body {
+    font-family: 'Roboto', sans-serif; /* Consider importing from Google Fonts */
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0; /* Light grey for contrast */
+    color: #333;
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2rem; /* Even smaller font size for smaller screens */
-    }
-
-    nav {
-        gap: 10px;
-    }
-
-    nav a {
-        font-size: 1rem; /* Further reduced link size */
-    }
-
-    #hero {
-        padding: 40px 10px; /* Reduce padding */
-    }
-
-    #hero h2 {
-        font-size: 1.8rem; /* Adjust heading size */
-    }
-
-    #hero p {
-        font-size: 0.9rem; /* Smaller font size for paragraph */
-    }
-
-    .btn {
-        padding: 10px 20px; /* Smaller padding for buttons */
-        font-size: 0.9rem;
-    }
-
-    .track {
-        padding: 15px; /* Smaller padding for track cards */
-    }
+header {
+    background: linear-gradient(to right, #1f1c2c, #928DAB); /* Gradient background */
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FFD700; /* Gold on hover */
+}
+
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif; /* Stylish font for headings */
+}
+
+h2 {
+    color: #FF5722; /* Vibrant orange for section titles */
+}
+
+form {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+button {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #E64A19; /* Darker shade on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+}
+
+.gold-key {
+    color: gold;
+    font-weight: bold;
+    font-size: 1.2em;
+}
