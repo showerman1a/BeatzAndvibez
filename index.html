@@ -3,53 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beatz and Vibez</title>
+    <title>Beatz and Vibez | Hip-Hop Beats</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #111;
+            color: #eee;
+            background-image: url('urban-background.jpg'); /* Urban-themed background */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 3rem;
+            color: #ffd700;
+            margin: 0;
+            letter-spacing: 3px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+        }
+        nav a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff00ff;
+        }
+        #hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        #hero h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        #hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .btn {
+            display: inline-block;
+            margin: 20px 10px;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #ff4500;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #ff6347;
+        }
+        #tracks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 0;
+        }
+        .track {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .track:hover {
+            transform: scale(1.05);
+        }
+        .track h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+        .track audio {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .track p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #000;
+            color: #ffd700;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Beatz and Vibez</h1>
+        <h1>Beatz and Vibez</h1>
         <nav>
-            <ul>
-                <li><a href="#tracks">Tracks</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#">Home</a>
+            <a href="#">Buy Beats</a>
+            <a href="#">Listen</a>
+            <a href="#">Contact</a>
         </nav>
     </header>
 
-    <section id="tracks">
-        <h2>Our Tracks</h2>
-        <div class="track-container">
-            <!-- Example Track -->
-            <div class="track">
-                <div class="track-info">
-                    <h3>Track Title</h3>
-                    <audio controls>
-                        <source src="track1.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                    <p>Price: $9.99</p>
-                    <button class="purchase-btn">Buy Now</button>
-                </div>
-                <div class="comments-section">
-                    <h4>Comments</h4>
-                    <div class="comments">
-                        <p><strong>User1:</strong> Love this beat!</p>
-                        <p><strong>User2:</strong> This is fire!</p>
-                    </div>
-                    <textarea placeholder="Leave a comment..."></textarea>
-                    <button class="comment-btn">Post Comment</button>
-                </div>
-            </div>
-            <!-- Repeat .track for each track you want to add -->
-        </div>
+    <section id="hero">
+        <h2>Urban Hip-Hop Beats and Exclusive Tracks</h2>
+        <p>Explore the best beats and vibes in the game. Whether you're looking for the next hit beat or want to chill with exclusive tracks, we've got you covered.</p>
+        <a href="#" class="btn">Buy Beats</a>
+        <a href="#" class="btn">Listen Now</a>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Beatz and Vibez. All rights reserved.</p>
-    </footer>
-
-    <script src="scripts.js"></script>
-</body>
-</html>
+    <section id="tracks">
+        <div class="track">
+            <h3>Track Name</h3>
+            <audio controls>
+                <source src="track1.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <p>Exclusive hip-hop beat. Perfect for your next project!</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+        <div class="track">
+            <h3>Track Name</h3>
+            <audio controls>
+                <source src="track2.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <p>Fresh and urban. Get this beat before it's gone!</p>
+            <a href=
